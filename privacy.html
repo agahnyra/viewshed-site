@@ -15,41 +15,93 @@
   <nav><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav>
 </header>
 <h1>Privacy Policy</h1>
-<p class="meta">Effective 14 October 2026 · Developer: Agah Emre Çelebi · Contact: <a href="mailto:customerservice@nyrainteractive.com">customerservice@nyrainteractive.com</a></p>
+<p class="meta">Effective 28 October 2026 · Controller: Agah Emre Çelebi (Nyra Interactive) · Contact: <a href="mailto:customerservice@nyrainteractive.com">customerservice@nyrainteractive.com</a></p>
 
 <h2>Summary</h2>
-<p>Viewshed is a puzzle game. It has no accounts, no sign-in and no chat. It does not collect your name, e-mail, contacts, location or photos. The data it handles is listed below, with why and who receives it.</p>
+<p>Viewshed is a puzzle game. It has no accounts of its own and no chat. It does not collect your e-mail, contacts, precise location or photos. To work online it uses an anonymous player ID; if you use Apple's Game Center (optional), that ID is linked to your Game Center player. Free players see ads, and our ad partners receive device and usage data as described in section 5. Everything is listed below: what, why, who receives it and for how long.</p>
 
-<h2>1. Data stored only on your device</h2>
+<h2>1. Data stored on your device</h2>
 <ul>
-  <li>Game progress, settings, passport stamps, streaks and hint tokens.</li>
-  <li>A local gameplay log (capped at 2 MB) used only to tune puzzle difficulty if you choose to send it to us. It never leaves the device by itself.</li>
-  <li>A small signed record of your daily energy and ad pacing, kept in the iOS Keychain so it survives reinstalling the app on the same device. It is not synced to other devices.</li>
+  <li>Game progress, settings, passport stamps, streaks, hint tokens, your field log (statistics of your own answers) and archive results. Progress is also backed up to our server (section 2). If progress from the server is merged in, the app keeps a copy of this device's earlier save on the device.</li>
+  <li>A local gameplay log (capped at 2 MB) that the game keeps for itself. It is never uploaded.</li>
+  <li>In the iOS Keychain, so they survive reinstalling the app on the same device: a signed record of your daily energy and ad pacing, energy you spent while offline (sent when you are back online), and the sign-in session of the anonymous player ID below. Not synced to other devices.</li>
 </ul>
 
-<h2>2. Anonymous player identifier (Unity Gaming Services)</h2>
-<p>When the app is online it signs in anonymously to Unity Gaming Services (Unity Technologies). This creates a random player ID that is not linked to your name or Apple ID. It is used to keep your daily energy count on the server so it cannot be tampered with, to rank your Daily Dispatch result against other players' results (score and time only, no names), and to verify a Viewshed Plus purchase for that player ID.</p>
-<p>Data sent: player ID, energy state, daily results, purchase entitlement status. Provider policy: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
+<h2>2. Anonymous player ID (Unity Gaming Services)</h2>
+<p>When online, the app signs in anonymously to Unity Gaming Services (Unity Technologies). This creates a random player ID. On its own it is not linked to your name or Apple ID; if you use Game Center, it is linked to your Game Center player (section 3).</p>
+<p>Under that player ID our game server (Unity Cloud Code and Cloud Save) keeps:</p>
+<ul>
+  <li>your daily energy state, so it cannot be tampered with;</li>
+  <li>your Daily Dispatch run (answers' scores, hints used, time) and your results of the last 14 days, to rank them against other players (score and time only, no names) and to show your week;</li>
+  <li>whether you have Viewshed Plus, as last checked with RevenueCat (section 4);</li>
+  <li>a backup of your game progress (expeditions, scores, streak, passport, field log, daily and archive results), the device model and when it was last saved. It is written after each run and when you leave the app. It comes back after reinstalling the app on the same iPhone, and on a new phone when you use Game Center. Your settings are included but never copied to another device;</li>
+  <li>if you report a problem with a photo: which photos you reported (so each counts once) and how many reports you made today (up to 10). The report itself is counted per photo (the photo's id, the reason you chose, the app version and the time) with no player ID attached. Reports made offline wait on the device until you are online.</li>
+  <li>if you use Game Center: your Game Center player identifier and your "hide my score from friends" choice.</li>
+</ul>
+<p>Ranking charts keep only counts per score range for each day, with no player data.</p>
+<p>Maps and photos for new expeditions are downloaded from Unity's content delivery service (Unity Cloud Content Delivery), which sees your IP address like any web server. When a request fails, the app checks whether the internet is reachable with a plain request to Apple's captive.apple.com, which carries no personal data. If the app crashes or hits an unexpected error, a crash report goes to Unity Diagnostics (Unity Technologies): where in the code it happened, the device model, OS and app version, memory state and the last lines of the app's log, under a random installation identifier. It contains no name, no player ID and no gameplay data, and we use it only to fix bugs.</p>
+<p>Provider policy: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
 
-<h2>3. Purchases (Apple, RevenueCat)</h2>
-<p>Viewshed Plus is sold through Apple's App Store. Apple handles payment; we never see your card. RevenueCat (RevenueCat, Inc.) processes the App Store receipt to grant the Plus entitlement and links it to the anonymous player ID above. Data: receipt, product, purchase and expiry dates, player ID. Provider policy: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+<h2>2a. Usage statistics (Unity Analytics, your choice)</h2>
+<p>To see where the game is too hard, too slow or confusing, the app can send a small set of usage statistics to Unity Analytics (Unity Technologies): your first ten rounds (game mode, points, hints, time), finished expeditions and daily dispatches (score, stars, streak), when you leave a run, hints, practice sets, running out of energy and which way on you took, when the Plus offer opens and purchase steps (product and outcome, never payment details), shares, changes to your streak, when the App Store rating prompt is requested, the reason chosen in a photo report, when progress is restored from the server, and the loading and frame timing of one round per session. Unity Analytics adds standard events (app start and end, device model, OS version, language, country derived from the IP address) under a random installation identifier and your player ID. No advertising identifier, name or free text is sent, and these statistics are not used for ads.</p>
+<p><strong>Your choice.</strong> If your device region is in the European Economic Area, the United Kingdom or Switzerland, or the region is unknown, nothing is sent unless you switch "Share usage statistics" on (on the ads and privacy sheet or in Settings). Everywhere else it is on by default and you can switch it off in Settings → Share usage statistics; collection stops at once. "Delete my data" also asks Unity Analytics to delete the statistics it holds for you.</p>
 
-<h2>4. Advertising (Unity LevelPlay)</h2>
-<p>Free players see interstitial ads at the end of a run and may choose to watch a rewarded ad for extra energy. Ads are served by Unity LevelPlay and the ad networks it mediates (currently Unity Ads). These networks receive device information (model, OS version, language, IP address, app version) and, <strong>only if you allow tracking</strong> in the iOS prompt, the advertising identifier (IDFA) to show more relevant ads. If you decline, ads still work but are not personalised. You can change the choice at any time in iOS Settings → Privacy &amp; Security → Tracking. Plus subscribers see no ads. Provider policy: <a href="https://unity.com/legal/privacy-policy">unity.com/legal/privacy-policy</a>.</p>
+<h2>3. Game Center (optional)</h2>
+<p>If you are signed in to Apple's Game Center on your iPhone, Viewshed uses it so you can continue on a new phone and compare the Daily Dispatch with your Game Center friends. You can play without it.</p>
+<ul>
+  <li><strong>What we keep:</strong> your Game Center player identifier (teamPlayerID), linked to your player ID above, so the same player (energy, Plus, daily results, the progress backup) comes back on another device; and a one-way hash of it, so friends' identifiers can be matched to players. Apple's signed proof that the identifier is yours is checked once and not stored.</li>
+  <li><strong>Your friend list:</strong> only if you allow the game to see it. To find which of your friends also play, the game sends your friends' Game Center identifiers to our server each time it shows the friends' results. The server uses them to look those players up and does not keep the list. Friends' names and photos stay on your iPhone; the game reads them from Game Center to show them to you.</li>
+  <li><strong>What your friends see:</strong> friends who also play and allowed the game see whether you played today's dispatch, how many of the last 7 days you played, whether you have Viewshed Plus (a gold star next to your name), and, after they have played today's dispatch, your score and time and your points of the last 7 days. You can hide your score and points from friends in Settings → Game Center.</li>
+  <li>You can unlink by signing out of Game Center in the iPhone's Settings app, and delete everything with Settings → Game Center → "Delete my data" in the game.</li>
+</ul>
 
-<h2>5. Notifications</h2>
+<h2>3a. Live rooms (Viewshed Plus)</h2>
+<p>In a live room you and up to seven other players answer the same photos at the same time. Rooms run on Unity Multiplayer Services (Lobby). The room keeps, while it is open: its rules and photos, each player's display name and map mark (an emblem Plus players choose), whether they are ready and connected, their answers and points, and the standings. Everyone in the room sees where each player placed their answer on the map (after answering themselves), their points and the standings. Your display name is your Game Center name (shortened to 20 characters), or a numbered surveyor name if you don't use Game Center. The player who opened the room can remove players. Opening and joining a room both need Viewshed Plus. A room is deleted when everyone has left. Live rooms are not available to Game Center accounts that are restricted from playing with others (for example by Screen Time).</p>
+
+<h2>4. Purchases (Apple, RevenueCat)</h2>
+<p>Viewshed Plus is sold through Apple's App Store. Apple handles payment; we never see your card. RevenueCat (RevenueCat, Inc.) processes the App Store receipt to grant the Plus entitlement and links it to your player ID; our server asks RevenueCat whether that player has Plus. Data: receipt, product, purchase and expiry dates, player ID. RevenueCat uses it to provide the purchase service and its analytics to us. Provider policy: <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+
+<h2>5. Advertising (Unity LevelPlay)</h2>
+<p>Free players see interstitial ads at the end of a run and may choose to watch a rewarded ad for extra energy. Ads are served by Unity LevelPlay and the ad networks it mediates (currently Unity Ads). They receive your player ID (to credit rewarded ads), device information (model, OS version, language, IP address and the approximate location derived from it, app version), ad interactions and performance data, and, <strong>only if you allow tracking</strong> in the iOS prompt, the advertising identifier (IDFA) to show more relevant ads. If you decline, ads still work but are not personalised. You can change the choice at any time in iOS Settings → Privacy &amp; Security → Tracking. Plus subscribers see no ads. What the ad networks do with this data is described in their policies (Unity: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">unity.com/legal/game-player-and-app-user-privacy-policy</a>).</p>
+<p><strong>Consent (EEA, UK, Switzerland) and opting out (elsewhere, including California).</strong> If your device region is in the European Economic Area, the United Kingdom or Switzerland, or it can't be determined, the app asks before the first ad whether our ad partners may use an identifier on your device for personalised ads; until you agree, only non-personalised ads are requested and the tracking prompt is not shown. Everywhere else ads are personalised by default (subject to your iOS tracking choice). Under California law, using data for personalised ads can count as "sharing" personal information for cross-context behavioural advertising. In every region you can switch personalised ads off, or back on, in the app under Settings → Personalised ads; switching them off is your opt-out of that selling or sharing. We do not sell personal data for money.</p>
+
+<h2>6. Notifications</h2>
 <p>Reminders (next daily, streak at risk, weekly goals) are scheduled locally on the device. No push server is involved. Turn them off in Settings → Reminders or in iOS Settings.</p>
 
-<h2>6. Sharing</h2>
+<h2>7. Sharing</h2>
 <p>The Share button opens the iOS share sheet with a text and an image you generated. Nothing is sent anywhere until you pick an app.</p>
+<p>"Email us" (Settings → About) opens your mail app with the app version, device model, iOS version and language filled in; you can edit them before sending. "Rate Viewshed" and the occasional rating prompt are Apple's own App Store features.</p>
 
-<h2>7. Children</h2>
+<h2>8. Why we use your data (legal bases)</h2>
+<ul>
+  <li><strong>To provide the game you asked for</strong> (contract): the player ID, energy, daily results and rankings, Game Center features, live rooms, purchases and restoring them.</li>
+  <li><strong>Legitimate interests:</strong> keeping energy and rankings fair (tamper checks), keeping the service secure and working, crash and performance diagnostics, showing non-personalised ads to free players, and usage statistics outside the EEA, the UK and Switzerland (you can switch them off).</li>
+  <li><strong>Consent:</strong> personalised ads and the advertising identifier (EEA/UK/Switzerland consent sheet, the iOS tracking prompt), usage statistics in the EEA, the UK and Switzerland, and reading your Game Center friend list. You can withdraw consent at any time in the places named above.</li>
+  <li><strong>Legal obligations:</strong> purchase records that Apple and RevenueCat keep for accounting and tax.</li>
+</ul>
+
+<h2>9. How long we keep it</h2>
+<ul>
+  <li>Daily results: the current run and the last 14 days; older days are dropped.</li>
+  <li>Energy state, Plus status, the progress backup, the Game Center link and your score choice: until you delete your data or ask us to.</li>
+  <li>Photo report counts: until the photo is fixed or replaced (they hold no player data).</li>
+  <li>Live rooms: until everyone has left the room.</li>
+  <li>Usage statistics: for the retention period Unity Analytics applies to our project, or until you use "Delete my data".</li>
+  <li>Ranking counts per score range: indefinitely (they hold no player data).</li>
+  <li>Purchase records at Apple and RevenueCat, and data held by ad networks: as their policies describe.</li>
+</ul>
+
+<h2>10. Where it is processed</h2>
+<p>Our providers (Unity Technologies, RevenueCat, the ad networks, Apple) process data on servers in the United States and other countries. Where data leaves the EEA, the UK, Switzerland or Türkiye, they rely on safeguards such as the European Commission's Standard Contractual Clauses.</p>
+
+<h2>11. Children</h2>
 <p>Viewshed is not directed at children under 13. We do not knowingly collect personal data from children.</p>
 
-<h2>8. Your rights</h2>
-<p>Because we hold no account data, most requests can be met by deleting the app, which removes all local data except the Keychain record (removed when the device is erased). To have the server-side record for your anonymous player ID deleted, e-mail <a href="mailto:customerservice@nyrainteractive.com">customerservice@nyrainteractive.com</a> from the device you play on. EU/UK residents have the rights under the GDPR and California residents the rights under the CCPA; we do not sell personal data.</p>
+<h2>12. Your rights</h2>
+<p>In the game, Settings → Game Center → "Delete my data" deletes everything our server keeps about you (energy, daily results, Plus status, the progress backup, your photo-report record, the Game Center link and score choice) and the anonymous player ID itself, asks Unity Analytics to delete your usage statistics, then deletes this device's progress (including any earlier copy kept from a merge) and gameplay log. "Reset progress" in Settings also resets the progress backup on our server. Plus stays with your Apple ID and comes back with Restore purchases; purchase records at Apple and RevenueCat, and data at ad networks, are not deleted by this button (write to us and we will forward a deletion request). Deleting the app removes local data except the Keychain record (removed when the device is erased).</p>
+<p>Depending on where you live you can ask for access to, correction or deletion of your data, restriction of or objection to its use, and a copy of it: the GDPR (EEA, UK, Switzerland), the CCPA (California) and Law No. 6698 on the Protection of Personal Data (KVKK, Türkiye) give you these rights. Write to <a href="mailto:customerservice@nyrainteractive.com">customerservice@nyrainteractive.com</a>. You also have the right to complain to your data protection authority (in Türkiye: the Personal Data Protection Authority, KVKK).</p>
 
-<h2>9. Changes</h2>
+<h2>13. Changes</h2>
 <p>We will post changes on this page with a new effective date.</p>
 
 <footer>© 2026 Agah Emre Çelebi</footer>
